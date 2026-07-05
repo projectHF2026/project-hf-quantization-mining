@@ -9,7 +9,7 @@ This README walks through every replication step. All commands assume the
 project root:
 
 ```
-$ROOT = /scratch/oldhome/user/projects/JAW/scripts/icpc-approch
+$ROOT = /Your/Root/Folder/Path/
 ```
 
 Adjust `$ROOT` to your machine and (once) do a search-and-replace on the
@@ -386,12 +386,6 @@ python3 output_dir/rq_analysis/shared/peft_boundary_rerun/scripts/compare_peft_o
    given the mined data and `SEED=42` (used by validation-sample construction
    and any random-draw step). The pipeline is idempotent — rerunning a stage
    overwrites its outputs.
-3. **Paths.** All scripts use absolute paths rooted at
-   `/scratch/oldhome/user/projects/JAW/scripts/icpc-approch`. Change these to
-   your machine before running:
-   ```bash
-   grep -rIl "/scratch/oldhome/user/projects/JAW" . | xargs sed -i "s|/scratch/oldhome/user/projects/JAW|/YOUR/ROOT/PATH|g"
-   ```
-4. **Tokens sanitized.** All previously-committed HF and GitHub tokens have
+3. **Tokens sanitized.** All previously-committed HF and GitHub tokens have
    been replaced with `hf_YOUR_TOKEN_HERE` and `ghp_YOUR_TOKEN_HERE`
    placeholders. Supply your own via env vars before running any fetch stage.
