@@ -1,0 +1,4 @@
+{"timestamp": "2026-06-20T03:08:21Z", "repo_id": "EduardoProfe666/une-unwrapped-habana", "mode": "self_quantized", "reason": "first_pickaxe_timeout", "keyword": "AutoGPTQForCausalLM", "timeout_seconds": 90}
+{"timestamp": "2026-06-20T04:42:03Z", "repo_id": "badmojr/1Hosts", "mode": "ollama_obtains_model", "reason": "first_pickaxe_timeout", "keyword": "AutoGPTQForCausalLM", "timeout_seconds": 90}
+{"timestamp": "2026-06-20T05:52:24Z", "repo_id": "majiayu000/claude-skill-registry", "mode": "self_quantized", "reason": "first_pickaxe_timeout", "keyword": "AutoGPTQForCausalLM", "timeout_seconds": 90}
+{"timestamp": "2026-06-20T06:58:24Z", "repo_id": "sophgo/tpu-mlir", "mode": "self_quantized", "reason": "first_pickaxe_timeout", "keyword": "AutoGPTQForCausalLM", "timeout_seconds": 90}

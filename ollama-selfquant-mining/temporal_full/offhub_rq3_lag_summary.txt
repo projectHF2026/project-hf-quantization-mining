@@ -1,0 +1,31 @@
+Off-hub RQ3.2 — adoption lag (ollama_obtains_model subset)
+Methodology mirrored from:
+  output_dir/rq_analysis/rq2/phase1_full/scripts/rq2_phase1_diagnostics.py
+Lower-bound framing: Lower-bound framing: first-commit dates from default-branch git history can be re-based or squashed; first-use dates therefore lower-bound true adoption. Default-branch-only mining means feature-branch first-uses are not seen.
+
+ollama_obtains_model rows total:                  615
+  with non-empty pulled_model_id:                 491
+  matched to HF metadata (hf_candidate + found):  1
+Unmatched breakdown:
+  Ollama-native (no '/' in pulled_id):            354
+  HF-shaped but not in HuggingFaceStudy dump:     26
+  garbage (code placeholders, file paths, etc.):  108
+  empty after URL/tag normalization:              2
+
+Self-quantized cohort (zero acquisition lag by construction):
+  n = 2,140 repos produce their quantized model in-repo;
+  these are NOT included in the lag distribution.
+
+======================================================================
+Lag statistics on the matched subset (days)
+  median + bootstrap 95% CI (10,000 resamples, seed=42)
+======================================================================
+  n               = 1
+  negative lags   = 0  (commit BEFORE HF model creation; flagged, not dropped)
+  median (days)   = 622.5
+  95% CI median   = [622.5, 622.5]
+  Q1 (p25)        = 622.5
+  Q3 (p75)        = 622.5
+  IQR             = 0.0
+  mean            = 622.5
+  min / max       = 622.5 / 622.5

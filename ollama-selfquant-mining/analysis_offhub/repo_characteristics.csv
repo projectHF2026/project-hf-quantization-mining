@@ -1,0 +1,5 @@
+cohort,n,stars_median,stars_mean,stars_p90,stars_p99,stars_eq0_pct,stars_ge1_pct,stars_ge5_pct,stars_ge10_pct,forks_median,forks_mean,archived_pct,fork_pct,pushed_active_last_6mo,pushed_active_last_12mo,pushed_older_than_12mo,pushed_unknown
+all_offhub,8424,0.00,138.26,36.70,2330.01,58.10,41.90,21.58,16.86,0.00,21.64,0.00,0.00,4020,1553,2851,0
+self_quantized,3171,1,248.12,101.00,6339.80,48.91,51.09,30.65,24.88,0,36.22,0.00,0.00,1499,495,1177,0
+ollama_obtains_model,659,1,167.79,95.20,2357.88,49.32,50.68,27.92,23.37,0,35.42,0.00,0.00,366,91,202,0
+ollama_backend_only,4594,0.00,58.20,11.00,687.99,65.69,34.31,14.41,10.38,0.00,9.60,0.00,0.00,2155,967,1472,0

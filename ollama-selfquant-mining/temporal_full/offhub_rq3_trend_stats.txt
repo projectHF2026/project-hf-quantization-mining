@@ -1,0 +1,54 @@
+Off-hub RQ3.1 — method adoption over time
+Methodology mirrored from:
+  output_dir/rq_analysis/rq2/phase1_full/scripts/rq2_phase1_diagnostics.py
+Lower-bound framing: Lower-bound framing: first-commit dates from default-branch git history can be re-based or squashed; first-use dates therefore lower-bound true adoption. Default-branch-only mining means feature-branch first-uses are not seen.
+
+======================================================================
+Aggregate growth — total first-signal events per year
+======================================================================
+  2022:     7
+  2023:   345
+  2024:   590
+  2025:   914
+  2026:   899 (PARTIAL)
+
+======================================================================
+Chi-square test of independence: method_family × year
+======================================================================
+  chi2       = 369.590
+  dof        = 32
+  p-value    = 4.6235e-59
+  Cramer's V = 0.1831
+  n_total    = 2,755
+  H0 (independence): REJECTED (families and years not independent)
+
+======================================================================
+Per dominant-family monthly trend tests
+  - OLS slope + 95% CI on monthly count series
+  - Mann-Kendall (tau, p) on monthly share series
+======================================================================
+
+  family: llama.cpp/GGUF-convert
+    n_events_in_window = 367
+    n_months           = 45
+    OLS monthly-count slope = +0.5117 events/month (95% CI [+0.2703, +0.7532]; p=1.0450e-04; CI strictly positive)
+    Mann-Kendall on share series: tau = +0.5304, p = 4.9282e-07  (rising, significant)
+
+  family: GPTQ
+    n_events_in_window = 990
+    n_months           = 45
+    OLS monthly-count slope = +0.7823 events/month (95% CI [+0.4916, +1.0731]; p=2.4742e-06; CI strictly positive)
+    Mann-Kendall on share series: tau = -0.2480, p = 1.6893e-02  (falling, significant)
+
+  family: AWQ
+    n_events_in_window = 115
+    n_months           = 45
+    OLS monthly-count slope = -0.0069 events/month (95% CI [-0.0730, +0.0593]; p=8.3545e-01; CI overlaps zero)
+    Mann-Kendall on share series: tau = -0.0906, p = 3.9086e-01  (falling, not significant)
+
+  family: Ollama-obtain
+    n_events_in_window = 822
+    n_months           = 45
+    OLS monthly-count slope = +1.1194 events/month (95% CI [+0.7783, +1.4604]; p=4.5989e-08; CI strictly positive)
+    Mann-Kendall on share series: tau = +0.5423, p = 2.0877e-07  (rising, significant)
+

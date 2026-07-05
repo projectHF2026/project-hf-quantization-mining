@@ -1,0 +1,9 @@
+{
+  "completed_at_utc": "2026-06-20T16:32:43+00:00",
+  "total_processed": 8424,
+  "ok": 3290,
+  "failed_or_partial": 5134,
+  "wallclock_seconds": 2341,
+  "tokens_used": 8,
+  "input_repos": "missed_repos.jsonl"
+}

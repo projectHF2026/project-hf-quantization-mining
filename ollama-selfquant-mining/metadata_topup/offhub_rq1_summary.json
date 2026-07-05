@@ -1,0 +1,1256 @@
+{
+  "schema": "offhub_rq1_summary/v1",
+  "computed_at_utc": "2026-06-20T16:55:53+00:00",
+  "input_file": "/scratch/oldhome/user/projects/JAW/scripts/icpc-approch/ollama-selfquant-mining/metadata_topup/offhub_repo_details.jsonl",
+  "hub_template": "/scratch/oldhome/user/projects/JAW/scripts/icpc-approch/output_dir/rq_analysis/rq0/results/rq0_summary.json",
+  "naming_note": "paper RQ1 = server-side rq0; structure mirrors rq0_summary.json",
+  "convention_note": "n_missing = repos where the signal value is null OR falls outside the specified bucket cuts. For stars, only nulls are counted (buckets cover 0..inf). For contributors and commits, the spec buckets start at 1, so values of 0 (representing API-empty / anonymous-only contributors or an empty default branch) are treated as missing. Summary statistics and bucket percentages are computed only on the non-missing in-range subset. The check bucket_sum + n_missing == cohort_total holds for every signal.",
+  "bucket_definitions": {
+    "stars": [
+      {
+        "label": "0",
+        "lower": 0,
+        "upper": 0
+      },
+      {
+        "label": "1",
+        "lower": 1,
+        "upper": 1
+      },
+      {
+        "label": "2-4",
+        "lower": 2,
+        "upper": 4
+      },
+      {
+        "label": "5-9",
+        "lower": 5,
+        "upper": 9
+      },
+      {
+        "label": "10-49",
+        "lower": 10,
+        "upper": 49
+      },
+      {
+        "label": "50-499",
+        "lower": 50,
+        "upper": 499
+      },
+      {
+        "label": ">=500",
+        "lower": 500,
+        "upper": "inf"
+      }
+    ],
+    "contributors": [
+      {
+        "label": "1",
+        "lower": 1,
+        "upper": 1
+      },
+      {
+        "label": "2-3",
+        "lower": 2,
+        "upper": 3
+      },
+      {
+        "label": "4-9",
+        "lower": 4,
+        "upper": 9
+      },
+      {
+        "label": ">=10",
+        "lower": 10,
+        "upper": "inf"
+      }
+    ],
+    "commits": [
+      {
+        "label": "1",
+        "lower": 1,
+        "upper": 1
+      },
+      {
+        "label": "2-10",
+        "lower": 2,
+        "upper": 10
+      },
+      {
+        "label": "11-100",
+        "lower": 11,
+        "upper": 100
+      },
+      {
+        "label": ">=101",
+        "lower": 101,
+        "upper": "inf"
+      }
+    ]
+  },
+  "reachability_summary": {
+    "total": 8424,
+    "repo_status_ok": 8400,
+    "repo_status_404": 18,
+    "repo_status_403": 0,
+    "repo_status_redirect_ok": 1,
+    "repo_status_other": 6,
+    "contributors_null": 24,
+    "contributors_zero": 20,
+    "contributors_missing_hub_convention": 44,
+    "commits_null": 24,
+    "commits_zero": 0,
+    "commits_missing_null_only": 24,
+    "commits_missing_incl_zero": 24
+  },
+  "overall": {
+    "cohort": "overall",
+    "cohort_total_count": 8424,
+    "convention_note": "n_missing = repos where the signal value is null OR falls outside the specified bucket cuts. For stars, only nulls are counted (buckets cover 0..inf). For contributors and commits, the spec buckets start at 1, so values of 0 (representing API-empty / anonymous-only contributors or an empty default branch) are treated as missing. Summary statistics and bucket percentages are computed only on the non-missing in-range subset. The check bucket_sum + n_missing == cohort_total holds for every signal.",
+    "stars": {
+      "field_source": "stars",
+      "summary_stats": {
+        "n": 8424,
+        "n_missing": 0,
+        "n_null": 0,
+        "n_out_of_range_zero": 0,
+        "min": 0,
+        "median": 0.0,
+        "mean": 138.2610398860399,
+        "max": 74069,
+        "Q1": 0.0,
+        "Q3": 3.0,
+        "IQR": 3.0,
+        "p90": 36.69999999999982,
+        "p95": 166.6999999999989,
+        "p99": 2330.0100000000057
+      },
+      "buckets": [
+        {
+          "bucket_label": "0",
+          "lower": 0,
+          "upper": 0,
+          "count": 4894,
+          "pct_of_non_missing": "58.10%"
+        },
+        {
+          "bucket_label": "1",
+          "lower": 1,
+          "upper": 1,
+          "count": 935,
+          "pct_of_non_missing": "11.10%"
+        },
+        {
+          "bucket_label": "2-4",
+          "lower": 2,
+          "upper": 4,
+          "count": 777,
+          "pct_of_non_missing": "9.22%"
+        },
+        {
+          "bucket_label": "5-9",
+          "lower": 5,
+          "upper": 9,
+          "count": 398,
+          "pct_of_non_missing": "4.72%"
+        },
+        {
+          "bucket_label": "10-49",
+          "lower": 10,
+          "upper": 49,
+          "count": 689,
+          "pct_of_non_missing": "8.18%"
+        },
+        {
+          "bucket_label": "50-499",
+          "lower": 50,
+          "upper": 499,
+          "count": 500,
+          "pct_of_non_missing": "5.94%"
+        },
+        {
+          "bucket_label": ">=500",
+          "lower": 500,
+          "upper": "inf",
+          "count": 231,
+          "pct_of_non_missing": "2.74%"
+        }
+      ],
+      "invariant": {
+        "bucket_sum": 8424,
+        "n_missing": 0,
+        "cohort_total": 8424,
+        "ok": true
+      }
+    },
+    "contributors": {
+      "field_source": "num_contributors_api_approx",
+      "summary_stats": {
+        "n": 8380,
+        "n_missing": 44,
+        "n_null": 24,
+        "n_out_of_range_zero": 20,
+        "min": 1,
+        "median": 1.0,
+        "mean": 26.622315035799524,
+        "max": 6393,
+        "Q1": 1.0,
+        "Q3": 2.0,
+        "IQR": 1.0,
+        "p90": 6.0,
+        "p95": 17.049999999999272,
+        "p99": 528.8399999999965
+      },
+      "buckets": [
+        {
+          "bucket_label": "1",
+          "lower": 1,
+          "upper": 1,
+          "count": 5090,
+          "pct_of_non_missing": "60.74%"
+        },
+        {
+          "bucket_label": "2-3",
+          "lower": 2,
+          "upper": 3,
+          "count": 2007,
+          "pct_of_non_missing": "23.95%"
+        },
+        {
+          "bucket_label": "4-9",
+          "lower": 4,
+          "upper": 9,
+          "count": 707,
+          "pct_of_non_missing": "8.44%"
+        },
+        {
+          "bucket_label": ">=10",
+          "lower": 10,
+          "upper": "inf",
+          "count": 576,
+          "pct_of_non_missing": "6.87%"
+        }
+      ],
+      "invariant": {
+        "bucket_sum": 8380,
+        "n_missing": 44,
+        "cohort_total": 8424,
+        "ok": true
+      }
+    },
+    "commits": {
+      "field_source": "num_commits_default_branch",
+      "summary_stats": {
+        "n": 8400,
+        "n_missing": 24,
+        "n_null": 24,
+        "n_out_of_range_zero": 0,
+        "min": 1,
+        "median": 16.0,
+        "mean": 530.7225,
+        "max": 336705,
+        "Q1": 5.0,
+        "Q3": 70.0,
+        "IQR": 65.0,
+        "p90": 350.0,
+        "p95": 1044.1499999999978,
+        "p99": 7622.1000000000895
+      },
+      "buckets": [
+        {
+          "bucket_label": "1",
+          "lower": 1,
+          "upper": 1,
+          "count": 582,
+          "pct_of_non_missing": "6.93%"
+        },
+        {
+          "bucket_label": "2-10",
+          "lower": 2,
+          "upper": 10,
+          "count": 2872,
+          "pct_of_non_missing": "34.19%"
+        },
+        {
+          "bucket_label": "11-100",
+          "lower": 11,
+          "upper": 100,
+          "count": 3235,
+          "pct_of_non_missing": "38.51%"
+        },
+        {
+          "bucket_label": ">=101",
+          "lower": 101,
+          "upper": "inf",
+          "count": 1711,
+          "pct_of_non_missing": "20.37%"
+        }
+      ],
+      "invariant": {
+        "bucket_sum": 8400,
+        "n_missing": 24,
+        "cohort_total": 8424,
+        "ok": true
+      }
+    },
+    "side_study_extras": {
+      "forks": {
+        "median": 0.0,
+        "mean": 21.64150047483381,
+        "p90": 6.0,
+        "p99": 311.77000000000044
+      },
+      "archived_pct": 0.0,
+      "fork_pct": 0.0,
+      "language_top15": [
+        [
+          "Python",
+          5194
+        ],
+        [
+          "JavaScript",
+          608
+        ],
+        [
+          "Jupyter Notebook",
+          575
+        ],
+        [
+          "TypeScript",
+          547
+        ],
+        [
+          "HTML",
+          269
+        ],
+        [
+          "C++",
+          223
+        ],
+        [
+          "Go",
+          202
+        ],
+        [
+          "Unknown",
+          148
+        ],
+        [
+          "Shell",
+          127
+        ],
+        [
+          "Rust",
+          100
+        ],
+        [
+          "C",
+          57
+        ],
+        [
+          "Java",
+          53
+        ],
+        [
+          "C#",
+          29
+        ],
+        [
+          "CSS",
+          17
+        ],
+        [
+          "Dart",
+          17
+        ]
+      ],
+      "created_years": {
+        "2011": 1,
+        "2012": 3,
+        "2013": 6,
+        "2014": 6,
+        "2015": 10,
+        "2016": 8,
+        "2017": 21,
+        "2018": 18,
+        "2019": 30,
+        "2020": 46,
+        "2021": 60,
+        "2022": 141,
+        "2023": 535,
+        "2024": 1792,
+        "2025": 3215,
+        "2026": 2532
+      },
+      "pushed_at_recency": {
+        "active_last_6mo": 3981,
+        "active_last_12mo": 1537,
+        "older_than_12mo": 2906,
+        "unknown": 0
+      },
+      "reference_date_for_push": "2026-06-20"
+    }
+  },
+  "by_mode": {
+    "self_quantized": {
+      "cohort": "self_quantized",
+      "cohort_total_count": 3171,
+      "convention_note": "n_missing = repos where the signal value is null OR falls outside the specified bucket cuts. For stars, only nulls are counted (buckets cover 0..inf). For contributors and commits, the spec buckets start at 1, so values of 0 (representing API-empty / anonymous-only contributors or an empty default branch) are treated as missing. Summary statistics and bucket percentages are computed only on the non-missing in-range subset. The check bucket_sum + n_missing == cohort_total holds for every signal.",
+      "stars": {
+        "field_source": "stars",
+        "summary_stats": {
+          "n": 3171,
+          "n_missing": 0,
+          "n_null": 0,
+          "n_out_of_range_zero": 0,
+          "min": 0,
+          "median": 1.0,
+          "mean": 248.120151371807,
+          "max": 74069,
+          "Q1": 0.0,
+          "Q3": 9.0,
+          "IQR": 9.0,
+          "p90": 101.0,
+          "p95": 460.5,
+          "p99": 6339.800000000101
+        },
+        "buckets": [
+          {
+            "bucket_label": "0",
+            "lower": 0,
+            "upper": 0,
+            "count": 1551,
+            "pct_of_non_missing": "48.91%"
+          },
+          {
+            "bucket_label": "1",
+            "lower": 1,
+            "upper": 1,
+            "count": 321,
+            "pct_of_non_missing": "10.12%"
+          },
+          {
+            "bucket_label": "2-4",
+            "lower": 2,
+            "upper": 4,
+            "count": 327,
+            "pct_of_non_missing": "10.31%"
+          },
+          {
+            "bucket_label": "5-9",
+            "lower": 5,
+            "upper": 9,
+            "count": 183,
+            "pct_of_non_missing": "5.77%"
+          },
+          {
+            "bucket_label": "10-49",
+            "lower": 10,
+            "upper": 49,
+            "count": 359,
+            "pct_of_non_missing": "11.32%"
+          },
+          {
+            "bucket_label": "50-499",
+            "lower": 50,
+            "upper": 499,
+            "count": 281,
+            "pct_of_non_missing": "8.86%"
+          },
+          {
+            "bucket_label": ">=500",
+            "lower": 500,
+            "upper": "inf",
+            "count": 149,
+            "pct_of_non_missing": "4.70%"
+          }
+        ],
+        "invariant": {
+          "bucket_sum": 3171,
+          "n_missing": 0,
+          "cohort_total": 3171,
+          "ok": true
+        }
+      },
+      "contributors": {
+        "field_source": "num_contributors_api_approx",
+        "summary_stats": {
+          "n": 3153,
+          "n_missing": 18,
+          "n_null": 9,
+          "n_out_of_range_zero": 9,
+          "min": 1,
+          "median": 1.0,
+          "mean": 59.57849666983825,
+          "max": 6393,
+          "Q1": 1.0,
+          "Q3": 3.0,
+          "IQR": 2.0,
+          "p90": 16.0,
+          "p95": 90.59999999999854,
+          "p99": 1641.48
+        },
+        "buckets": [
+          {
+            "bucket_label": "1",
+            "lower": 1,
+            "upper": 1,
+            "count": 1627,
+            "pct_of_non_missing": "51.60%"
+          },
+          {
+            "bucket_label": "2-3",
+            "lower": 2,
+            "upper": 3,
+            "count": 783,
+            "pct_of_non_missing": "24.83%"
+          },
+          {
+            "bucket_label": "4-9",
+            "lower": 4,
+            "upper": 9,
+            "count": 347,
+            "pct_of_non_missing": "11.01%"
+          },
+          {
+            "bucket_label": ">=10",
+            "lower": 10,
+            "upper": "inf",
+            "count": 396,
+            "pct_of_non_missing": "12.56%"
+          }
+        ],
+        "invariant": {
+          "bucket_sum": 3153,
+          "n_missing": 18,
+          "cohort_total": 3171,
+          "ok": true
+        }
+      },
+      "commits": {
+        "field_source": "num_commits_default_branch",
+        "summary_stats": {
+          "n": 3162,
+          "n_missing": 9,
+          "n_null": 9,
+          "n_out_of_range_zero": 0,
+          "min": 1,
+          "median": 22.0,
+          "mean": 822.8175205566098,
+          "max": 102249,
+          "Q1": 6.0,
+          "Q3": 118.0,
+          "IQR": 112.0,
+          "p90": 751.1000000000008,
+          "p95": 2221.8999999999924,
+          "p99": 12498.529999999997
+        },
+        "buckets": [
+          {
+            "bucket_label": "1",
+            "lower": 1,
+            "upper": 1,
+            "count": 174,
+            "pct_of_non_missing": "5.50%"
+          },
+          {
+            "bucket_label": "2-10",
+            "lower": 2,
+            "upper": 10,
+            "count": 929,
+            "pct_of_non_missing": "29.38%"
+          },
+          {
+            "bucket_label": "11-100",
+            "lower": 11,
+            "upper": 100,
+            "count": 1203,
+            "pct_of_non_missing": "38.05%"
+          },
+          {
+            "bucket_label": ">=101",
+            "lower": 101,
+            "upper": "inf",
+            "count": 856,
+            "pct_of_non_missing": "27.07%"
+          }
+        ],
+        "invariant": {
+          "bucket_sum": 3162,
+          "n_missing": 9,
+          "cohort_total": 3171,
+          "ok": true
+        }
+      },
+      "side_study_extras": {
+        "forks": {
+          "median": 0.0,
+          "mean": 36.22485020498266,
+          "p90": 15.0,
+          "p99": 659.5000000000027
+        },
+        "archived_pct": 0.0,
+        "fork_pct": 0.0,
+        "language_top15": [
+          [
+            "Python",
+            2299
+          ],
+          [
+            "Jupyter Notebook",
+            247
+          ],
+          [
+            "C++",
+            204
+          ],
+          [
+            "Unknown",
+            59
+          ],
+          [
+            "TypeScript",
+            53
+          ],
+          [
+            "HTML",
+            44
+          ],
+          [
+            "Rust",
+            41
+          ],
+          [
+            "C",
+            36
+          ],
+          [
+            "Go",
+            35
+          ],
+          [
+            "JavaScript",
+            30
+          ],
+          [
+            "Shell",
+            28
+          ],
+          [
+            "Cuda",
+            10
+          ],
+          [
+            "Java",
+            9
+          ],
+          [
+            "C#",
+            9
+          ],
+          [
+            "Makefile",
+            8
+          ]
+        ],
+        "created_years": {
+          "2011": 1,
+          "2012": 2,
+          "2014": 2,
+          "2015": 6,
+          "2016": 2,
+          "2017": 9,
+          "2018": 6,
+          "2019": 16,
+          "2020": 30,
+          "2021": 46,
+          "2022": 102,
+          "2023": 397,
+          "2024": 612,
+          "2025": 1026,
+          "2026": 914
+        },
+        "pushed_at_recency": {
+          "active_last_6mo": 1489,
+          "active_last_12mo": 486,
+          "older_than_12mo": 1196,
+          "unknown": 0
+        },
+        "reference_date_for_push": "2026-06-20"
+      }
+    },
+    "ollama_obtains_model": {
+      "cohort": "ollama_obtains_model",
+      "cohort_total_count": 659,
+      "convention_note": "n_missing = repos where the signal value is null OR falls outside the specified bucket cuts. For stars, only nulls are counted (buckets cover 0..inf). For contributors and commits, the spec buckets start at 1, so values of 0 (representing API-empty / anonymous-only contributors or an empty default branch) are treated as missing. Summary statistics and bucket percentages are computed only on the non-missing in-range subset. The check bucket_sum + n_missing == cohort_total holds for every signal.",
+      "stars": {
+        "field_source": "stars",
+        "summary_stats": {
+          "n": 659,
+          "n_missing": 0,
+          "n_null": 0,
+          "n_out_of_range_zero": 0,
+          "min": 0,
+          "median": 1.0,
+          "mean": 167.78755690440062,
+          "max": 51788,
+          "Q1": 0.0,
+          "Q3": 8.0,
+          "IQR": 8.0,
+          "p90": 95.20000000000005,
+          "p95": 290.3000000000003,
+          "p99": 2357.8799999999933
+        },
+        "buckets": [
+          {
+            "bucket_label": "0",
+            "lower": 0,
+            "upper": 0,
+            "count": 325,
+            "pct_of_non_missing": "49.32%"
+          },
+          {
+            "bucket_label": "1",
+            "lower": 1,
+            "upper": 1,
+            "count": 78,
+            "pct_of_non_missing": "11.84%"
+          },
+          {
+            "bucket_label": "2-4",
+            "lower": 2,
+            "upper": 4,
+            "count": 72,
+            "pct_of_non_missing": "10.93%"
+          },
+          {
+            "bucket_label": "5-9",
+            "lower": 5,
+            "upper": 9,
+            "count": 30,
+            "pct_of_non_missing": "4.55%"
+          },
+          {
+            "bucket_label": "10-49",
+            "lower": 10,
+            "upper": 49,
+            "count": 66,
+            "pct_of_non_missing": "10.02%"
+          },
+          {
+            "bucket_label": "50-499",
+            "lower": 50,
+            "upper": 499,
+            "count": 61,
+            "pct_of_non_missing": "9.26%"
+          },
+          {
+            "bucket_label": ">=500",
+            "lower": 500,
+            "upper": "inf",
+            "count": 27,
+            "pct_of_non_missing": "4.10%"
+          }
+        ],
+        "invariant": {
+          "bucket_sum": 659,
+          "n_missing": 0,
+          "cohort_total": 659,
+          "ok": true
+        }
+      },
+      "contributors": {
+        "field_source": "num_contributors_api_approx",
+        "summary_stats": {
+          "n": 653,
+          "n_missing": 6,
+          "n_null": 3,
+          "n_out_of_range_zero": 3,
+          "min": 1,
+          "median": 1.0,
+          "mean": 17.981623277182237,
+          "max": 5890,
+          "Q1": 1.0,
+          "Q3": 2.0,
+          "IQR": 1.0,
+          "p90": 5.0,
+          "p95": 12.0,
+          "p99": 189.32000000000016
+        },
+        "buckets": [
+          {
+            "bucket_label": "1",
+            "lower": 1,
+            "upper": 1,
+            "count": 384,
+            "pct_of_non_missing": "58.81%"
+          },
+          {
+            "bucket_label": "2-3",
+            "lower": 2,
+            "upper": 3,
+            "count": 164,
+            "pct_of_non_missing": "25.11%"
+          },
+          {
+            "bucket_label": "4-9",
+            "lower": 4,
+            "upper": 9,
+            "count": 62,
+            "pct_of_non_missing": "9.49%"
+          },
+          {
+            "bucket_label": ">=10",
+            "lower": 10,
+            "upper": "inf",
+            "count": 43,
+            "pct_of_non_missing": "6.58%"
+          }
+        ],
+        "invariant": {
+          "bucket_sum": 653,
+          "n_missing": 6,
+          "cohort_total": 659,
+          "ok": true
+        }
+      },
+      "commits": {
+        "field_source": "num_commits_default_branch",
+        "summary_stats": {
+          "n": 656,
+          "n_missing": 3,
+          "n_null": 3,
+          "n_out_of_range_zero": 0,
+          "min": 1,
+          "median": 26.0,
+          "mean": 1813.2408536585365,
+          "max": 336705,
+          "Q1": 6.0,
+          "Q3": 120.25,
+          "IQR": 114.25,
+          "p90": 576.0,
+          "p95": 2182.5,
+          "p99": 9540.600000000039
+        },
+        "buckets": [
+          {
+            "bucket_label": "1",
+            "lower": 1,
+            "upper": 1,
+            "count": 41,
+            "pct_of_non_missing": "6.25%"
+          },
+          {
+            "bucket_label": "2-10",
+            "lower": 2,
+            "upper": 10,
+            "count": 176,
+            "pct_of_non_missing": "26.83%"
+          },
+          {
+            "bucket_label": "11-100",
+            "lower": 11,
+            "upper": 100,
+            "count": 255,
+            "pct_of_non_missing": "38.87%"
+          },
+          {
+            "bucket_label": ">=101",
+            "lower": 101,
+            "upper": "inf",
+            "count": 184,
+            "pct_of_non_missing": "28.05%"
+          }
+        ],
+        "invariant": {
+          "bucket_sum": 656,
+          "n_missing": 3,
+          "cohort_total": 659,
+          "ok": true
+        }
+      },
+      "side_study_extras": {
+        "forks": {
+          "median": 0.0,
+          "mean": 35.41881638846738,
+          "p90": 13.0,
+          "p99": 311.41999999999996
+        },
+        "archived_pct": 0.0,
+        "fork_pct": 0.0,
+        "language_top15": [
+          [
+            "Python",
+            298
+          ],
+          [
+            "TypeScript",
+            44
+          ],
+          [
+            "Go",
+            43
+          ],
+          [
+            "Jupyter Notebook",
+            41
+          ],
+          [
+            "JavaScript",
+            41
+          ],
+          [
+            "Unknown",
+            38
+          ],
+          [
+            "Shell",
+            34
+          ],
+          [
+            "HTML",
+            34
+          ],
+          [
+            "Rust",
+            15
+          ],
+          [
+            "Java",
+            13
+          ],
+          [
+            "PowerShell",
+            7
+          ],
+          [
+            "C++",
+            4
+          ],
+          [
+            "R",
+            4
+          ],
+          [
+            "Roff",
+            3
+          ],
+          [
+            "CSS",
+            3
+          ]
+        ],
+        "created_years": {
+          "2012": 1,
+          "2013": 1,
+          "2014": 2,
+          "2015": 1,
+          "2016": 3,
+          "2017": 3,
+          "2018": 5,
+          "2019": 8,
+          "2020": 5,
+          "2021": 5,
+          "2022": 14,
+          "2023": 25,
+          "2024": 155,
+          "2025": 216,
+          "2026": 215
+        },
+        "pushed_at_recency": {
+          "active_last_6mo": 365,
+          "active_last_12mo": 87,
+          "older_than_12mo": 207,
+          "unknown": 0
+        },
+        "reference_date_for_push": "2026-06-20"
+      }
+    },
+    "ollama_backend_only": {
+      "cohort": "ollama_backend_only",
+      "cohort_total_count": 4594,
+      "convention_note": "n_missing = repos where the signal value is null OR falls outside the specified bucket cuts. For stars, only nulls are counted (buckets cover 0..inf). For contributors and commits, the spec buckets start at 1, so values of 0 (representing API-empty / anonymous-only contributors or an empty default branch) are treated as missing. Summary statistics and bucket percentages are computed only on the non-missing in-range subset. The check bucket_sum + n_missing == cohort_total holds for every signal.",
+      "stars": {
+        "field_source": "stars",
+        "summary_stats": {
+          "n": 4594,
+          "n_missing": 0,
+          "n_null": 0,
+          "n_out_of_range_zero": 0,
+          "min": 0,
+          "median": 0.0,
+          "mean": 58.195472355245975,
+          "max": 36619,
+          "Q1": 0.0,
+          "Q3": 1.0,
+          "IQR": 1.0,
+          "p90": 11.0,
+          "p95": 44.349999999999454,
+          "p99": 687.9899999999834
+        },
+        "buckets": [
+          {
+            "bucket_label": "0",
+            "lower": 0,
+            "upper": 0,
+            "count": 3018,
+            "pct_of_non_missing": "65.69%"
+          },
+          {
+            "bucket_label": "1",
+            "lower": 1,
+            "upper": 1,
+            "count": 536,
+            "pct_of_non_missing": "11.67%"
+          },
+          {
+            "bucket_label": "2-4",
+            "lower": 2,
+            "upper": 4,
+            "count": 378,
+            "pct_of_non_missing": "8.23%"
+          },
+          {
+            "bucket_label": "5-9",
+            "lower": 5,
+            "upper": 9,
+            "count": 185,
+            "pct_of_non_missing": "4.03%"
+          },
+          {
+            "bucket_label": "10-49",
+            "lower": 10,
+            "upper": 49,
+            "count": 264,
+            "pct_of_non_missing": "5.75%"
+          },
+          {
+            "bucket_label": "50-499",
+            "lower": 50,
+            "upper": 499,
+            "count": 158,
+            "pct_of_non_missing": "3.44%"
+          },
+          {
+            "bucket_label": ">=500",
+            "lower": 500,
+            "upper": "inf",
+            "count": 55,
+            "pct_of_non_missing": "1.20%"
+          }
+        ],
+        "invariant": {
+          "bucket_sum": 4594,
+          "n_missing": 0,
+          "cohort_total": 4594,
+          "ok": true
+        }
+      },
+      "contributors": {
+        "field_source": "num_contributors_api_approx",
+        "summary_stats": {
+          "n": 4574,
+          "n_missing": 20,
+          "n_null": 12,
+          "n_out_of_range_zero": 8,
+          "min": 1,
+          "median": 1.0,
+          "mean": 5.138172278093572,
+          "max": 872,
+          "Q1": 1.0,
+          "Q3": 2.0,
+          "IQR": 1.0,
+          "p90": 3.0,
+          "p95": 6.0,
+          "p99": 65.15999999999622
+        },
+        "buckets": [
+          {
+            "bucket_label": "1",
+            "lower": 1,
+            "upper": 1,
+            "count": 3079,
+            "pct_of_non_missing": "67.32%"
+          },
+          {
+            "bucket_label": "2-3",
+            "lower": 2,
+            "upper": 3,
+            "count": 1060,
+            "pct_of_non_missing": "23.17%"
+          },
+          {
+            "bucket_label": "4-9",
+            "lower": 4,
+            "upper": 9,
+            "count": 298,
+            "pct_of_non_missing": "6.52%"
+          },
+          {
+            "bucket_label": ">=10",
+            "lower": 10,
+            "upper": "inf",
+            "count": 137,
+            "pct_of_non_missing": "3.00%"
+          }
+        ],
+        "invariant": {
+          "bucket_sum": 4574,
+          "n_missing": 20,
+          "cohort_total": 4594,
+          "ok": true
+        }
+      },
+      "commits": {
+        "field_source": "num_commits_default_branch",
+        "summary_stats": {
+          "n": 4582,
+          "n_missing": 12,
+          "n_null": 12,
+          "n_out_of_range_zero": 0,
+          "min": 1,
+          "median": 12.0,
+          "mean": 145.53339153208205,
+          "max": 21411,
+          "Q1": 4.0,
+          "Q3": 45.0,
+          "IQR": 41.0,
+          "p90": 172.0,
+          "p95": 400.9499999999998,
+          "p99": 2957.949999999998
+        },
+        "buckets": [
+          {
+            "bucket_label": "1",
+            "lower": 1,
+            "upper": 1,
+            "count": 367,
+            "pct_of_non_missing": "8.01%"
+          },
+          {
+            "bucket_label": "2-10",
+            "lower": 2,
+            "upper": 10,
+            "count": 1767,
+            "pct_of_non_missing": "38.56%"
+          },
+          {
+            "bucket_label": "11-100",
+            "lower": 11,
+            "upper": 100,
+            "count": 1777,
+            "pct_of_non_missing": "38.78%"
+          },
+          {
+            "bucket_label": ">=101",
+            "lower": 101,
+            "upper": "inf",
+            "count": 671,
+            "pct_of_non_missing": "14.64%"
+          }
+        ],
+        "invariant": {
+          "bucket_sum": 4582,
+          "n_missing": 12,
+          "cohort_total": 4594,
+          "ok": true
+        }
+      },
+      "side_study_extras": {
+        "forks": {
+          "median": 0.0,
+          "mean": 9.59904222899434,
+          "p90": 2.0,
+          "p99": 106.13999999999942
+        },
+        "archived_pct": 0.0,
+        "fork_pct": 0.0,
+        "language_top15": [
+          [
+            "Python",
+            2597
+          ],
+          [
+            "JavaScript",
+            537
+          ],
+          [
+            "TypeScript",
+            450
+          ],
+          [
+            "Jupyter Notebook",
+            287
+          ],
+          [
+            "HTML",
+            191
+          ],
+          [
+            "Go",
+            124
+          ],
+          [
+            "Shell",
+            65
+          ],
+          [
+            "Unknown",
+            51
+          ],
+          [
+            "Rust",
+            44
+          ],
+          [
+            "Java",
+            31
+          ],
+          [
+            "C#",
+            18
+          ],
+          [
+            "C",
+            18
+          ],
+          [
+            "C++",
+            15
+          ],
+          [
+            "Dart",
+            14
+          ],
+          [
+            "Vue",
+            14
+          ]
+        ],
+        "created_years": {
+          "2013": 5,
+          "2014": 2,
+          "2015": 3,
+          "2016": 3,
+          "2017": 9,
+          "2018": 7,
+          "2019": 6,
+          "2020": 11,
+          "2021": 9,
+          "2022": 25,
+          "2023": 113,
+          "2024": 1025,
+          "2025": 1973,
+          "2026": 1403
+        },
+        "pushed_at_recency": {
+          "active_last_6mo": 2127,
+          "active_last_12mo": 964,
+          "older_than_12mo": 1503,
+          "unknown": 0
+        },
+        "reference_date_for_push": "2026-06-20"
+      }
+    }
+  }
+}

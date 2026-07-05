@@ -1,0 +1,13 @@
+section,year,is_partial,AMD-Quark,AWQ,ExLlamaV2,GPTQ,Ollama-obtain,SmoothQuant,compressed-tensors,llama.cpp/GGUF-convert,torchao,year_total
+counts,2022,no,0,0,0,1,0,5,0,0,1,7
+counts,2023,no,0,38,2,175,50,36,0,38,6,345
+counts,2024,no,0,44,15,236,171,27,0,52,45,590
+counts,2025,no,1,20,18,321,272,36,33,106,107,914
+counts,2026,yes,2,13,8,257,329,27,29,171,63,899
+
+section,year,is_partial,AMD-Quark,AWQ,ExLlamaV2,GPTQ,Ollama-obtain,SmoothQuant,compressed-tensors,llama.cpp/GGUF-convert,torchao,year_total
+shares_pct,2022,no,0.00,0.00,0.00,14.29,0.00,71.43,0.00,0.00,14.29,7
+shares_pct,2023,no,0.00,11.01,0.58,50.72,14.49,10.43,0.00,11.01,1.74,345
+shares_pct,2024,no,0.00,7.46,2.54,40.00,28.98,4.58,0.00,8.81,7.63,590
+shares_pct,2025,no,0.11,2.19,1.97,35.12,29.76,3.94,3.61,11.60,11.71,914
+shares_pct,2026,yes,0.22,1.45,0.89,28.59,36.60,3.00,3.23,19.02,7.01,899
