@@ -1,0 +1,772 @@
+{
+  "total_models_with_results": 40764,
+  "total_unique_repos": 50511,
+  "total_matches": 503767,
+  "capped_models_count": 90,
+  "capped_models": [
+    {
+      "model_id": "Cohee/jina-embeddings-v2-base-en",
+      "total_count": 1268
+    },
+    {
+      "model_id": "MiniMaxAI/MiniMax-M2",
+      "total_count": 1888
+    },
+    {
+      "model_id": "MiniMaxAI/MiniMax-M2.1",
+      "total_count": 1028
+    },
+    {
+      "model_id": "Modular/model",
+      "total_count": 1136
+    },
+    {
+      "model_id": "QuantFactory/SmolLM-135M-GGUF",
+      "total_count": 1248
+    },
+    {
+      "model_id": "Qwen/Qwen1.5-0.5B-Chat-GGUF",
+      "total_count": 1400
+    },
+    {
+      "model_id": "Qwen/Qwen1.5-14B-Chat-AWQ",
+      "total_count": 3016
+    },
+    {
+      "model_id": "Qwen/Qwen1.5-7B-Chat-AWQ",
+      "total_count": 2380
+    },
+    {
+      "model_id": "Qwen/Qwen2-VL-2B-Instruct-GPTQ-Int4",
+      "total_count": 1017
+    },
+    {
+      "model_id": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+      "total_count": 1128
+    },
+    {
+      "model_id": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic",
+      "total_count": 1072
+    },
+    {
+      "model_id": "Snowflake/snowflake-arctic-embed-m-v1.5",
+      "total_count": 1104
+    },
+    {
+      "model_id": "TheBloke/Llama-2-13B-chat-AWQ",
+      "total_count": 1512
+    },
+    {
+      "model_id": "TheBloke/Llama-2-7B-Chat-GGUF",
+      "total_count": 2000
+    },
+    {
+      "model_id": "TheBloke/LlamaGuard-7B-AWQ",
+      "total_count": 2200
+    },
+    {
+      "model_id": "TheBloke/Mistral-7B-Instruct-v0.1-GGUF",
+      "total_count": 1300
+    },
+    {
+      "model_id": "TheBloke/Mistral-7B-Instruct-v0.2-GGUF",
+      "total_count": 1320
+    },
+    {
+      "model_id": "TheBloke/Mistral-7B-Instruct-v0.1-AWQ",
+      "total_count": 1372
+    },
+    {
+      "model_id": "TheBloke/OpenHermes-2.5-Mistral-7B-AWQ",
+      "total_count": 1876
+    },
+    {
+      "model_id": "TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF",
+      "total_count": 1456
+    },
+    {
+      "model_id": "TheBloke/deepseek-coder-6.7B-base-AWQ",
+      "total_count": 1820
+    },
+    {
+      "model_id": "TheBloke/deepseek-coder-6.7B-instruct-AWQ",
+      "total_count": 1872
+    },
+    {
+      "model_id": "TheBloke/neural-chat-7B-v3-1-AWQ",
+      "total_count": 1276
+    },
+    {
+      "model_id": "TheBloke/zephyr-7B-beta-AWQ",
+      "total_count": 1288
+    },
+    {
+      "model_id": "Xenova/all-distilroberta-v1",
+      "total_count": 1196
+    },
+    {
+      "model_id": "Xenova/bge-base-zh",
+      "total_count": 1236
+    },
+    {
+      "model_id": "Xenova/bge-base-en",
+      "total_count": 1372
+    },
+    {
+      "model_id": "Xenova/bge-large-en",
+      "total_count": 1136
+    },
+    {
+      "model_id": "Xenova/bge-large-en-v1.5",
+      "total_count": 1136
+    },
+    {
+      "model_id": "Xenova/bge-base-en-v1.5",
+      "total_count": 1364
+    },
+    {
+      "model_id": "Xenova/bge-base-zh-v1.5",
+      "total_count": 1236
+    },
+    {
+      "model_id": "Xenova/bge-m3",
+      "total_count": 1316
+    },
+    {
+      "model_id": "Xenova/bge-large-zh-v1.5",
+      "total_count": 1224
+    },
+    {
+      "model_id": "Xenova/bge-small-zh-v1.5",
+      "total_count": 1184
+    },
+    {
+      "model_id": "Xenova/bge-small-en-v1.5",
+      "total_count": 1808
+    },
+    {
+      "model_id": "Xenova/bge-small-en",
+      "total_count": 1816
+    },
+    {
+      "model_id": "Xenova/clap-htsat-unfused",
+      "total_count": 1304
+    },
+    {
+      "model_id": "Xenova/colbertv2.0",
+      "total_count": 1144
+    },
+    {
+      "model_id": "Xenova/distilbert-base-uncased",
+      "total_count": 1008
+    },
+    {
+      "model_id": "Xenova/e5-base",
+      "total_count": 1212
+    },
+    {
+      "model_id": "Xenova/e5-base-v2",
+      "total_count": 1212
+    },
+    {
+      "model_id": "Xenova/e5-large",
+      "total_count": 1180
+    },
+    {
+      "model_id": "Xenova/e5-large-v2",
+      "total_count": 1180
+    },
+    {
+      "model_id": "Xenova/e5-small",
+      "total_count": 1228
+    },
+    {
+      "model_id": "Xenova/e5-small-v2",
+      "total_count": 1228
+    },
+    {
+      "model_id": "Xenova/gte-base",
+      "total_count": 1240
+    },
+    {
+      "model_id": "Xenova/gte-small",
+      "total_count": 1360
+    },
+    {
+      "model_id": "Xenova/hubert-base-ls960",
+      "total_count": 1044
+    },
+    {
+      "model_id": "Xenova/multilingual-e5-base",
+      "total_count": 1252
+    },
+    {
+      "model_id": "Xenova/multilingual-e5-large",
+      "total_count": 1172
+    },
+    {
+      "model_id": "Xenova/multilingual-e5-small",
+      "total_count": 1528
+    },
+    {
+      "model_id": "Xenova/nomic-embed-text-v1",
+      "total_count": 1276
+    },
+    {
+      "model_id": "Xenova/wavlm-base",
+      "total_count": 1196
+    },
+    {
+      "model_id": "Xenova/wavlm-base-plus",
+      "total_count": 1196
+    },
+    {
+      "model_id": "bartowski/Llama-3.2-3B-Instruct-GGUF",
+      "total_count": 1208
+    },
+    {
+      "model_id": "deepseek-ai/DeepSeek-V3",
+      "total_count": 4212
+    },
+    {
+      "model_id": "deepseek-ai/DeepSeek-R1",
+      "total_count": 2864
+    },
+    {
+      "model_id": "deepseek-ai/DeepSeek-R1-0528",
+      "total_count": 2216
+    },
+    {
+      "model_id": "deepseek-ai/DeepSeek-V3-0324",
+      "total_count": 2536
+    },
+    {
+      "model_id": "deepseek-ai/DeepSeek-V3.1",
+      "total_count": 1616
+    },
+    {
+      "model_id": "deepseek-ai/DeepSeek-V3.2",
+      "total_count": 1500
+    },
+    {
+      "model_id": "deepseek-ai/DeepSeek-V3.2-Exp",
+      "total_count": 1832
+    },
+    {
+      "model_id": "defog/sqlcoder-7b-2",
+      "total_count": 2944
+    },
+    {
+      "model_id": "eet/Z",
+      "total_count": 2088
+    },
+    {
+      "model_id": "google/gemma-2b",
+      "total_count": 2872
+    },
+    {
+      "model_id": "google/gemma-2b-it",
+      "total_count": 3248
+    },
+    {
+      "model_id": "google/gemma-7b",
+      "total_count": 3808
+    },
+    {
+      "model_id": "google/gemma-7b-it",
+      "total_count": 2528
+    },
+    {
+      "model_id": "hugging-quants/Meta-Llama-3.1-8B-Instruct-AWQ-INT4",
+      "total_count": 2992
+    },
+    {
+      "model_id": "leolee9086/text2vec-base-chinese",
+      "total_count": 1204
+    },
+    {
+      "model_id": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+      "total_count": 1824
+    },
+    {
+      "model_id": "microsoft/phi-4-gguf",
+      "total_count": 1240
+    },
+    {
+      "model_id": "microsoft/Phi-3-mini-4k-instruct-gguf",
+      "total_count": 1572
+    },
+    {
+      "model_id": "mixedbread-ai/mxbai-embed-2d-large-v1",
+      "total_count": 1028
+    },
+    {
+      "model_id": "mixedbread-ai/mxbai-embed-large-v1",
+      "total_count": 1376
+    },
+    {
+      "model_id": "moonshotai/Kimi-K2-Thinking",
+      "total_count": 2408
+    },
+    {
+      "model_id": "moonshotai/Kimi-K2-Instruct-0905",
+      "total_count": 2736
+    },
+    {
+      "model_id": "moonshotai/Kimi-K2-Instruct",
+      "total_count": 2976
+    },
+    {
+      "model_id": "moonshotai/Kimi-K2.5",
+      "total_count": 10816
+    },
+    {
+      "model_id": "openai/gpt-oss-20b",
+      "total_count": 2756
+    },
+    {
+      "model_id": "openai/gpt-oss-safeguard-20b",
+      "total_count": 1216
+    },
+    {
+      "model_id": "openai/gpt-oss-120b",
+      "total_count": 5744
+    },
+    {
+      "model_id": "tngtech/DeepSeek-R1T-Chimera",
+      "total_count": 1168
+    },
+    {
+      "model_id": "unsloth/Llama-3.2-3B-Instruct-bnb-4bit",
+      "total_count": 1056
+    },
+    {
+      "model_id": "unsloth/Meta-Llama-3.1-8B-bnb-4bit",
+      "total_count": 1248
+    },
+    {
+      "model_id": "unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit",
+      "total_count": 1232
+    },
+    {
+      "model_id": "unsloth/gemma-2-9b-bnb-4bit",
+      "total_count": 1004
+    },
+    {
+      "model_id": "unsloth/gpt-oss-20b",
+      "total_count": 1312
+    },
+    {
+      "model_id": "unsloth/mistral-7b",
+      "total_count": 1188
+    },
+    {
+      "model_id": "unsloth/mistral-7b-instruct-v0.3-bnb-4bit",
+      "total_count": 1472
+    }
+  ],
+  "top_models_by_repos": [
+    [
+      "Qwen/Qwen2-VL-2B-Instruct-GPTQ-Int4",
+      790
+    ],
+    [
+      "Qwen/Qwen-1_8B-Chat-Int8",
+      723
+    ],
+    [
+      "Qwen/Qwen2-VL-7B-Instruct-AWQ",
+      707
+    ],
+    [
+      "Qwen/Qwen2-VL-2B-Instruct-AWQ",
+      693
+    ],
+    [
+      "Qwen/Qwen-72B-Chat-Int8",
+      691
+    ],
+    [
+      "Qwen/Qwen2-VL-7B-Instruct-GPTQ-Int4",
+      689
+    ],
+    [
+      "Qwen/Qwen2-VL-7B-Instruct-GPTQ-Int8",
+      669
+    ],
+    [
+      "Qwen/Qwen2-VL-2B-Instruct-GPTQ-Int8",
+      668
+    ],
+    [
+      "Qwen/Qwen1.5-7B-Chat-GPTQ-Int8",
+      641
+    ],
+    [
+      "Qwen/Qwen-14B-Chat-Int8",
+      639
+    ],
+    [
+      "Qwen/Qwen-72B-Chat-Int4",
+      637
+    ],
+    [
+      "Qwen/Qwen2-1.5B-Instruct-AWQ",
+      631
+    ],
+    [
+      "Qwen/Qwen2.5-72B-Instruct-AWQ",
+      628
+    ],
+    [
+      "casperhansen/mixtral-instruct-awq",
+      627
+    ],
+    [
+      "Qwen/Qwen1.5-1.8B-Chat-GPTQ-Int8",
+      624
+    ],
+    [
+      "Qwen/Qwen1.5-4B-Chat-GPTQ-Int8",
+      623
+    ],
+    [
+      "Qwen/Qwen1.5-14B-Chat-GPTQ-Int8",
+      622
+    ],
+    [
+      "Qwen/Qwen2.5-VL-7B-Instruct-AWQ",
+      612
+    ],
+    [
+      "Qwen/Qwen1.5-0.5B-Chat-GPTQ-Int8",
+      611
+    ],
+    [
+      "Qwen/Qwen1.5-0.5B-Chat-AWQ",
+      607
+    ],
+    [
+      "Qwen/Qwen1.5-72B-Chat-AWQ",
+      607
+    ],
+    [
+      "Qwen/Qwen1.5-MoE-A2.7B-Chat-GPTQ-Int4",
+      607
+    ],
+    [
+      "Qwen/Qwen1.5-1.8B-Chat-AWQ",
+      604
+    ],
+    [
+      "Qwen/Qwen2.5-7B-Instruct-GPTQ-Int4",
+      597
+    ],
+    [
+      "Qwen/Qwen2-7B-Instruct-AWQ",
+      592
+    ],
+    [
+      "Qwen/CodeQwen1.5-7B-Chat-AWQ",
+      589
+    ],
+    [
+      "Qwen/Qwen2-72B-Instruct-AWQ",
+      587
+    ],
+    [
+      "Qwen/Qwen1.5-72B-Chat-GPTQ-Int8",
+      586
+    ],
+    [
+      "Qwen/Qwen2.5-VL-72B-Instruct-AWQ",
+      586
+    ],
+    [
+      "01-ai/Yi-34B-Chat-8bits",
+      575
+    ],
+    [
+      "Qwen/Qwen2-VL-72B-Instruct-AWQ",
+      575
+    ],
+    [
+      "Qwen/Qwen2-57B-A14B-Instruct-GPTQ-Int4",
+      567
+    ],
+    [
+      "Qwen/Qwen2-1.5B-Instruct-GPTQ-Int4",
+      564
+    ],
+    [
+      "Qwen/Qwen2-7B-Instruct-GPTQ-Int8",
+      564
+    ],
+    [
+      "Qwen/Qwen2-0.5B-Instruct-AWQ",
+      563
+    ],
+    [
+      "Qwen/Qwen1.5-4B-Chat-AWQ",
+      562
+    ],
+    [
+      "Qwen/Qwen2-72B-Instruct-GPTQ-Int8",
+      560
+    ],
+    [
+      "01-ai/Yi-6B-Chat-8bits",
+      559
+    ],
+    [
+      "Duxiaoman-DI/XuanYuan-70B-Chat-4bit",
+      558
+    ],
+    [
+      "Qwen/Qwen1.5-110B-Chat-AWQ",
+      558
+    ],
+    [
+      "deepseek-ai/DeepSeek-R1-Zero",
+      558
+    ],
+    [
+      "Duxiaoman-DI/XuanYuan-70B-Chat-8bit",
+      557
+    ],
+    [
+      "Qwen/Qwen2-0.5B-Instruct-GPTQ-Int8",
+      553
+    ],
+    [
+      "Qwen/Qwen2-1.5B-Instruct-GPTQ-Int8",
+      552
+    ],
+    [
+      "Qwen/Qwen2-VL-72B-Instruct-GPTQ-Int4",
+      551
+    ],
+    [
+      "Qwen/Qwen2.5-72B-Instruct-GPTQ-Int4",
+      551
+    ],
+    [
+      "stabilityai/stablelm-2-zephyr-1_6b",
+      549
+    ],
+    [
+      "Qwen/Qwen2.5-14B-Instruct-GPTQ-Int4",
+      544
+    ],
+    [
+      "Qwen/Qwen2-VL-72B-Instruct-GPTQ-Int8",
+      541
+    ],
+    [
+      "ybelkada/bloom-1b7-8bit",
+      540
+    ]
+  ],
+  "top_repos_by_models": [
+    [
+      "local-ai-zone/local-ai-zone.github.io",
+      7998
+    ],
+    [
+      "MSC-empirical/msc-empirical",
+      4865
+    ],
+    [
+      "alexhiggins732/BLlamaSharp.ChatGpt.Blazor",
+      3711
+    ],
+    [
+      "asgaardlab/hf-question-answer",
+      2639
+    ],
+    [
+      "fdac24/MP3",
+      1907
+    ],
+    [
+      "audrism/MP3",
+      1906
+    ],
+    [
+      "dave-gray101/automated-model-gallery",
+      1427
+    ],
+    [
+      "leliuga/cohere-configurations",
+      1407
+    ],
+    [
+      "DynaHug-Detector/DynaHug",
+      1204
+    ],
+    [
+      "smol-ai/ainews-web-2025",
+      832
+    ],
+    [
+      "fbaldassarri/fbaldassarri-HF-index",
+      788
+    ],
+    [
+      "swyxio/reactsummit-demo",
+      775
+    ],
+    [
+      "zzsyppt/llm-eco-viz",
+      751
+    ],
+    [
+      "surcyf123/dataset_enrichment",
+      652
+    ],
+    [
+      "roboalchemist/llm-code-docs",
+      613
+    ],
+    [
+      "YinanWusoymilk/hf-readme",
+      558
+    ],
+    [
+      "na-na-hi/renget",
+      556
+    ],
+    [
+      "badr-ach/si5-rimel-scripts",
+      554
+    ],
+    [
+      "RIMEL-UCA/RIMEL-UCA.github.io",
+      552
+    ],
+    [
+      "TrashBoatDora/CWE-022-light",
+      520
+    ],
+    [
+      "JefJacobs00/Local-LLMs-4-Bash",
+      470
+    ],
+    [
+      "gai4se/LLM4SE",
+      465
+    ],
+    [
+      "xorbitsai/inference",
+      419
+    ],
+    [
+      "wuuuenoi/wwqxinf",
+      398
+    ],
+    [
+      "unslothai/unsloth",
+      393
+    ],
+    [
+      "broalantaps/OKX",
+      388
+    ],
+    [
+      "Konjarla-Vindya/son-azureml-oss-models",
+      357
+    ],
+    [
+      "miounet11/llmfit",
+      348
+    ],
+    [
+      "Barkeydog/minefit",
+      348
+    ],
+    [
+      "isLinXu/Training_Hub",
+      343
+    ],
+    [
+      "zzsyppt/llm-eco-viz-v2",
+      329
+    ],
+    [
+      "yiyihum/rag291",
+      327
+    ],
+    [
+      "melhzy/ADAM",
+      324
+    ],
+    [
+      "isLinXu/Source-Code-Reading",
+      299
+    ],
+    [
+      "itsmehere/Spath",
+      299
+    ],
+    [
+      "chrystalla92/optimum",
+      287
+    ],
+    [
+      "sodollars/xorbitsai-inference",
+      286
+    ],
+    [
+      "JoseAdrianRodriguezGonzalez/Llm-Component",
+      274
+    ],
+    [
+      "shimo-lab/modelmap",
+      273
+    ],
+    [
+      "o9nn/agi-os",
+      271
+    ],
+    [
+      "SleepingFolktales/llmcalculator",
+      271
+    ],
+    [
+      "anhtranguyen-github/karag",
+      270
+    ],
+    [
+      "amanak9798-eng/DroidClaw",
+      269
+    ],
+    [
+      "boduare/boddu-list-repo",
+      263
+    ],
+    [
+      "Rinor352/unsloth",
+      263
+    ],
+    [
+      "AlexsJones/llmfit",
+      261
+    ],
+    [
+      "ArtiomNosov/mephi-data-analysis-part2-2025-fall",
+      259
+    ],
+    [
+      "amap-cvlab/AstraNav-Memory",
+      258
+    ],
+    [
+      "ineffably/jsonarium",
+      252
+    ],
+    [
+      "dongqi-me/VISTA",
+      249
+    ]
+  ]
+}
