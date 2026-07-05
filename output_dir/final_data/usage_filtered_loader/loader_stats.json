@@ -1,0 +1,41 @@
+{
+  "total_repos": 42515,
+  "tier_counts": {
+    "A_usage": 29292,
+    "C_mention_only": 9560,
+    "D_ambiguous": 2248,
+    "B_config_only": 1415
+  },
+  "tierA1_usage_filetype_repos": 29292,
+  "tierA2_usage_loader_confirmed_repos": 22874,
+  "tierA2_usage_loader_unconfirmed_repos": 6418,
+  "tokens_loaded": 9,
+  "workers": 9,
+  "max_files_per_repo": 25,
+  "loader_patterns": [
+    "transformers_from_pretrained",
+    "auto_model_from_pretrained",
+    "auto_tokenizer_from_pretrained",
+    "pipeline_model",
+    "bitsandbytes_config",
+    "load_in_4bit",
+    "load_in_8bit",
+    "snapshot_download",
+    "hf_hub_download",
+    "autogptq_from_quantized",
+    "autoawq_from_quantized",
+    "ctransformers_from_pretrained",
+    "llama_cpp_llama",
+    "import_llama_cpp",
+    "gguf_path",
+    "llama_cli",
+    "cli_model_flag"
+  ],
+  "quant_evidence_patterns": [
+    "bitsandbytes_4bit_8bit",
+    "gptq_awq",
+    "gguf_llama",
+    "exl2"
+  ],
+  "confirmation_rule": "model_id string AND loader regex in same file; notebooks scan code cells only"
+}

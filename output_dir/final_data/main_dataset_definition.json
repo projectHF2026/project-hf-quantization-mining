@@ -1,0 +1,43 @@
+{
+  "name": "JAW main dataset",
+  "definition": "Tier A2 (loader-confirmed quantized HF model adoption repos) minus PEFT-only repos. A repo is PEFT-only if EVERY referenced model classifies as status='peft_lora' (library_name=peft OR model_id contains qlora|lora|dora|adapter, after the method taxonomy normalization). PEFT/LoRA fine-tune adapters are excluded because they represent a fine-tuning recipe rather than a quantization-method choice (see rq_analysis/rq1/results/peft_lora_investigation.txt).",
+  "rule": {
+    "include": "Repos with at least one non-PEFT model: primary, auxiliary-only, generic-residual, or no-signal.",
+    "exclude": "Repos where every classified model has status='peft_lora' AND no unknown models."
+  },
+  "counts": {
+    "tier_a2_total": 22874,
+    "peft_only_excluded": 340,
+    "main_dataset_size": 22534,
+    "pct_excluded": 1.486
+  },
+  "categorization_breakdown": {
+    "strict_partition": {
+      "peft_only_repos": 340,
+      "primary_only_repos": 18138,
+      "aux_only_repos": 1327,
+      "generic_only_repos": 248,
+      "no_signal_only_repos": 16,
+      "mixed_non_peft_repos": 1444,
+      "mixed_with_peft_repos": 1170,
+      "other_repos": 191
+    },
+    "overlapping_flags": {
+      "has_primary_models": 20923,
+      "has_auxiliary_models": 2531,
+      "has_peft_models": 1510,
+      "has_generic_models": 1182
+    }
+  },
+  "input_files": {
+    "tier_a2_jsonl": "/scratch/oldhome/user/projects/JAW/scripts/icpc-approch/output_dir/final_data/usage_filtered_loader/tierA2_usage_loader_confirmed_repo_details.jsonl",
+    "tier_a2_csv": "/scratch/oldhome/user/projects/JAW/scripts/icpc-approch/output_dir/final_data/usage_filtered_loader/tierA2_usage_loader_confirmed_repo_details.csv",
+    "models_index_jsonl": "/scratch/oldhome/user/projects/JAW/scripts/icpc-approch/output_dir/quantized_filtered/quantized_models_all.jsonl"
+  },
+  "output_files": {
+    "main_dataset_repos_txt": "/scratch/oldhome/user/projects/JAW/scripts/icpc-approch/output_dir/final_data/main_dataset_repos.txt",
+    "main_dataset_repo_details_jsonl": "/scratch/oldhome/user/projects/JAW/scripts/icpc-approch/output_dir/final_data/main_dataset_repo_details.jsonl",
+    "main_dataset_repo_details_csv": "/scratch/oldhome/user/projects/JAW/scripts/icpc-approch/output_dir/final_data/main_dataset_repo_details.csv",
+    "main_dataset_definition_json": "/scratch/oldhome/user/projects/JAW/scripts/icpc-approch/output_dir/final_data/main_dataset_definition.json"
+  }
+}

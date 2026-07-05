@@ -1,0 +1,53 @@
+{
+  "total_repos": 42515,
+  "tier_counts": {
+    "A_usage": 29292,
+    "C_mention_only": 9560,
+    "D_ambiguous": 2248,
+    "B_config_only": 1415
+  },
+  "tier_percentages": {
+    "A_usage": 68.9,
+    "C_mention_only": 22.49,
+    "D_ambiguous": 5.29,
+    "B_config_only": 3.33
+  },
+  "sum_num_models_by_tier": {
+    "A_usage": 230890,
+    "C_mention_only": 42450,
+    "D_ambiguous": 12769,
+    "B_config_only": 10127
+  },
+  "top_file_extensions_in_matches": {
+    ".md": 46390,
+    ".py": 44655,
+    ".yaml": 17034,
+    ".json": 13967,
+    ".ipynb": 10694,
+    ".html": 10490,
+    ".sh": 5800,
+    ".ts": 3910,
+    ".txt": 3750,
+    ".js": 2370,
+    "(no ext)": 2273,
+    ".csv": 1865,
+    ".yml": 1423,
+    ".rs": 1285,
+    ".swift": 1114,
+    ".cpp": 929,
+    ".jsonl": 900,
+    ".mdx": 816,
+    ".rst": 615,
+    ".go": 543,
+    ".xml": 521,
+    ".example": 494,
+    ".tsx": 488,
+    ".cs": 392,
+    ".log": 358,
+    ".bat": 279,
+    ".kt": 275,
+    ".toml": 255,
+    ".ps1": 193,
+    ".mjs": 181
+  }
+}
