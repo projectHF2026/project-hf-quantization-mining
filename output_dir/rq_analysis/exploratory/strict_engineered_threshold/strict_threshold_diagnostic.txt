@@ -1,0 +1,28 @@
+========================================================================
+STRICT ENGINEERED THRESHOLD — EXPLORATORY DIAGNOSTIC
+========================================================================
+
+Input    : /scratch/oldhome/user/projects/JAW/scripts/icpc-approch/output_dir/rq_analysis/shared/results/analysis_set_repo_details.jsonl
+Total N  : 22,024 analysis-set repositories
+
+Thresholds (all three must hold; missing/null fails conservatively):
+  stars                     >= 10
+  num_commits_default_branch >= 100
+  num_contributors_api_approx >= 10
+
+Individual-criterion counts:
+  stars        >= 10       :  3,377  (15.33%)
+  commits      >= 100      :  5,467  (24.82%)
+  contributors >= 10       :  2,209  (10.03%)
+
+Pairwise-intersection counts:
+  stars >= 10  AND commits >= 100    :  1,469  (6.67%)
+  stars >= 10  AND contributors >= 10:    635  (2.88%)
+  commits >= 100 AND contributors>=10:  2,141  (9.72%)
+
+Three-way conjunction (the strict cohort):
+  ALL three                :    608  (2.76%)
+
+Note: exploratory only. The canonical RQ1 engineered subsets
+(stars1, stars5, stars10) remain the authoritative results in the
+paper.

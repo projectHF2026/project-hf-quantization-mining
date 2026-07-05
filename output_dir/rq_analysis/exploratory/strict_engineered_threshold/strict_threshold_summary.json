@@ -1,0 +1,30 @@
+{
+  "description": "Exploratory strict engineered-project threshold: how many analysis-set repos satisfy ALL of stars >= 10, commits >= 100, and contributors >= 10? Missing/null values for any signal fail that criterion (conservative exclusion).",
+  "thresholds": {
+    "stars_min": 10,
+    "commits_min": 100,
+    "contributors_min": 10
+  },
+  "input_file": "/scratch/oldhome/user/projects/JAW/scripts/icpc-approch/output_dir/rq_analysis/shared/results/analysis_set_repo_details.jsonl",
+  "counts": {
+    "analysis_set_total": 22024,
+    "stars_ge_10": 3377,
+    "commits_ge_100": 5467,
+    "contributors_ge_10": 2209,
+    "stars_AND_commits": 1469,
+    "stars_AND_contributors": 635,
+    "commits_AND_contributors": 2141,
+    "stars_AND_commits_AND_contributors": 608
+  },
+  "percentages_of_analysis_set": {
+    "stars_ge_10": "15.33%",
+    "commits_ge_100": "24.82%",
+    "contributors_ge_10": "10.03%",
+    "stars_AND_commits": "6.67%",
+    "stars_AND_contributors": "2.88%",
+    "commits_AND_contributors": "9.72%",
+    "stars_AND_commits_AND_contributors": "2.76%",
+    "analysis_set_total": "100.00%"
+  },
+  "note": "This is exploratory only. The canonical RQ1 engineered subsets (stars1, stars5, stars10) remain the authoritative results in the paper."
+}
