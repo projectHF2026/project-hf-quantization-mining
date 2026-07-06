@@ -1,4 +1,4 @@
-# JQuantized Model Adoption in Open-Source Software: Prevalence, Practices, and Evolution (Replication Package)
+# Quantized Model Adoption in Open-Source Software: Prevalence, Practices, and Evolution (Replication Package)
 
 End-to-end pipeline for the empirical study on how quantized Hugging Face (HF)
 models are adopted in real-world GitHub repositories, split into a **hub-side**
